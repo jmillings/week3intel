@@ -1,0 +1,204 @@
+/* Set up basic font and background */
+body {
+  font-family: Arial, sans-serif; /* Simple, readable font */
+  /* Set Intel-themed image as background */
+  background-image: url(https://techdecode.online/wp-content/uploads/2024/11/Hyperthreading-in-CPUs.webp);
+  background-size: cover; /* Make image cover the whole background */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-attachment: fixed; /* Keep background fixed on scroll */
+  background-color: #d5d9db; /* Fallback color */
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+header {
+  background-color: #0068b5; /* Intel blue */
+  color: white;
+  padding: 32px 0 24px 0;
+  text-align: center;
+  /* Add Intel CPU image as header background */
+  background-image: url('https://cdn.wccftech.com/wp-content/uploads/2022/12/Intel-Mobile-CPU-gigapixel-standard-scale-4_00x-1456x799.jpg');
+  background-size: cover;      /* Cover the header area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat;/* Do not repeat */
+}
+
+header img {
+  /* Resize the logo */
+  height: 60px;
+  width: auto;
+  margin-bottom: 16px;
+
+}
+
+header h1 {
+  margin: 0 0 12px 0;
+  font-size: 2.2rem;
+}
+
+header p {
+  margin: 0 auto;
+  max-width: 500px;
+  font-size: 1.1rem;
+}
+
+/* Nav bar styles */
+nav {
+  background: rgba(0, 104, 181, 0.95); /* Intel blue, slightly transparent */
+  padding: 12px 0;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 18px;
+  font-size: 1.08rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #464747; /* Gold on hover for contrast */
+  position: relative; /* Needed for top movement */
+  top: -4px;          /* Move link up on hover */
+  transition: color 0.2s, top 0.2s; /* Smooth float effect */
+}
+
+/* Timeline container styles */
+.timeline {
+  display: flex; /* Use Flexbox for layout */
+  flex-direction: row; /* Arrange cards side by side */
+  flex-wrap: nowrap;   /* Prevent wrapping so cards scroll horizontally */
+  justify-content: flex-start; /* Align cards to the left */
+  gap: 24px; /* Space between cards */
+  padding: 32px 16px;
+  overflow-x: auto; /* Allow horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling effect */
+  scroll-snap-type: x mandatory; /* Enable horizontal scroll snapping */
+  width: 100vw; /* Make timeline fill the whole page horizontally */
+  max-width: none; /* Remove width limit so timeline fits page */
+  margin-left: 30px;  /* Add space to the left of the timeline */
+  margin-right: 30px; /* Add space to the right of the timeline */
+}
+
+/* Each timeline card will snap to the start of the container when scrolling */
+.timeline-card {
+  background: rgba(68, 82, 116, 0.952); /* Slightly transparent white */
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  width: 45%;           /* Each card takes about half the container width */
+  min-width: 260px;
+  max-width: 320px;
+  flex: 0 0 260px; /* Prevent shrinking, fixed width */
+  padding: 20px 16px 16px 16px;
+  position: relative;
+  transition: box-shadow 0.2s, transform 0.2s; /* Add transform to transition */
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-snap-align: start; /* Snap each card to the start of the timeline */
+}
+
+.timeline-card:hover {
+  box-shadow: 0 4px 16px rgba(0,104,181,0.18);
+  transform: scale(1.04); /* Slightly enlarge card on hover */
+}
+
+/* Card image styles */
+.card-img {
+  width: 80%;
+  height: 130px; /* Contain the image within the box */
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background: #e0e7ef; /* Placeholder bg if image missing */
+}
+
+/* Card headings */
+.timeline-card h2 {
+  margin: 0;
+  color: #01080f;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 4px rgba(247, 243, 243, 0.18); /* Add subtle shadow for readability */
+}
+
+.timeline-card h3 {
+  margin: 4px 0 8px 0;
+  font-size: 1.1rem;
+  color: #050505;
+}
+
+/* Card paragraph */
+.timeline-card p {
+  font-size: 0.98rem;
+  margin: 0 0 8px 0;
+  text-align: center;
+  color: #000000;
+  text-shadow: #d5d9db;
+}
+
+/* Hidden details section */
+.card-details {
+  display: none; /* Hide by default */
+  background: #e6f0fa;
+  color: #06325e;
+  border-radius: 8px;
+  padding: 8px;
+  margin-top: 8px;
+  font-size: 0.95rem;
+  transition: opacity 0.3s;
+}
+
+/* Show details on hover */
+.timeline-card:hover .card-details {
+  display: block;
+  opacity: 1;
+}
+
+/* Responsive: stack cards vertically on small screens */
+/* On screens smaller than 600px, timeline cards are stacked vertically */
+@media (max-width: 600px) {
+  .timeline {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    scroll-snap-type: none; /* Disable snapping on small screens */
+    max-width: none;        /* Remove width limit */
+  }
+  .timeline-card {
+    /* Show card content stacked (vertical) on small screens */
+    flex-direction: column; /* vertical layout */
+    width: 90vw;
+    min-width: 0;
+    max-width: 400px;
+  }
+}
+
+/* Add some spacing below the timeline */
+.timeline + p {
+  text-align: center;
+  color: #fcfdff;
+  margin-bottom: 32px;
+  font-size: 1rem;
+  text-shadow: #050505
+}
+
+/* Footer styles */
+footer {
+  background: rgba(0, 104, 181, 0.92); /* Intel blue, slightly transparent */
+  color: #fff;
+  text-align: center;
+  padding: 18px 8px 16px 8px;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  margin-top: 32px;
+  border-radius: 10px 10px 0 0;
+}
+
+/* End of CSS */
