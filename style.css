@@ -1,86 +1,86 @@
-/* Set up basic font and background */
+/* استخدم خطوط بسيطة وخلفية واضحة */
 body {
-  font-family: Arial, sans-serif; /* Simple, readable font */
-  /* Set Intel-themed image as background */
-  background-image: url(https://techdecode.online/wp-content/uploads/2024/11/Hyperthreading-in-CPUs.webp);
-  background-size: cover; /* Make image cover the whole background */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-attachment: fixed; /* Keep background fixed on scroll */
-  background-color: #d5d9db; /* Fallback color */
+  font-family: Arial, sans-serif;
+  background-color: #d5d9db;
   color: #222;
   margin: 0;
   padding: 0;
 }
 
-/* Header styles */
+/* رأس الصفحة */
 header {
-  background-color: #0068b5; /* Intel blue */
+  background-color: #0068b5;
   color: white;
   padding: 32px 0 24px 0;
   text-align: center;
-  /* Add Intel CPU image as header background */
-  background-image: url('https://cdn.wccftech.com/wp-content/uploads/2022/12/Intel-Mobile-CPU-gigapixel-standard-scale-4_00x-1456x799.jpg');
-  background-size: cover;      /* Cover the header area */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat;/* Do not repeat */
 }
 
+/* شعار إنتل */
 header img {
-  /* Resize the logo */
   height: 60px;
   width: auto;
   margin-bottom: 16px;
-
 }
 
+/* العنوان الرئيسي */
 header h1 {
   margin: 0 0 12px 0;
   font-size: 2.2rem;
 }
 
+/* الوصف */
 header p {
   margin: 0 auto;
   max-width: 500px;
   font-size: 1.1rem;
 }
 
-/* Nav bar styles */
+/* شريط التنقل */
 nav {
-  background: rgba(0, 104, 181, 0.95); /* Intel blue, slightly transparent */
-  padding: 12px 0;
-  text-align: center;
-  margin-bottom: 0;
+  /* استخدم Bootstrap للأنماط */
 }
 
-nav a {
+/* بطاقات الجدول الزمني */
+.card-title i {
+  color: #0068b5;
+  margin-left: 8px;
+}
+
+/* زر "تعرف أكثر" */
+.btn-outline-primary {
+  border-radius: 8px;
+}
+
+/* نموذج الاشتراك */
+form {
+  /* استخدم Bootstrap للأنماط */
+}
+
+/* تذييل الصفحة */
+footer {
+  background: #0068b5;
   color: #fff;
-  text-decoration: none;
-  margin: 0 18px;
-  font-size: 1.08rem;
-  font-weight: bold;
+  text-align: center;
+  padding: 18px 8px 16px 8px;
+  font-size: 1rem;
   letter-spacing: 0.5px;
-  transition: color 0.2s;
+  margin-top: 32px;
+  border-radius: 10px 10px 0 0;
 }
 
-nav a:hover {
-  color: #464747; /* Gold on hover for contrast */
-  position: relative; /* Needed for top movement */
-  top: -4px;          /* Move link up on hover */
-  transition: color 0.2s, top 0.2s; /* Smooth float effect */
+/* دعم RTL */
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
 }
 
-/* Timeline container styles */
-.timeline {
-  display: flex; /* Use Flexbox for layout */
-  flex-direction: row; /* Arrange cards side by side */
-  flex-wrap: nowrap;   /* Prevent wrapping so cards scroll horizontally */
-  justify-content: flex-start; /* Align cards to the left */
-  gap: 24px; /* Space between cards */
-  padding: 32px 16px;
-  overflow-x: auto; /* Allow horizontal scrolling */
-  scroll-behavior: smooth; /* Smooth scrolling effect */
-  scroll-snap-type: x mandatory; /* Enable horizontal scroll snapping */
+/* دعم LTR عند تغيير اللغة */
+html[dir="ltr"] {
+  direction: ltr;
+  text-align: left;
+}
+
+/* نهاية CSS */
   width: 100vw; /* Make timeline fill the whole page horizontally */
   max-width: none; /* Remove width limit so timeline fits page */
   margin-left: 30px;  /* Add space to the left of the timeline */
