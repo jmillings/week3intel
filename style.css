@@ -1,24 +1,37 @@
 /* استخدم خطوط بسيطة وخلفية واضحة */
 body {
   font-family: Arial, sans-serif;
-  background-color: #d5d9db;
-  color: #222;
+  background-color: #011a25;
+  color: #140d0d;
   margin: 0;
   padding: 0;
+  background-image: url('https://newsroom.intel.com/wp-content/uploads/2024/11/newsroom-Intel-ARL-Chip-4-scaled.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* رأس الصفحة */
 header {
-  background-color: #0068b5;
-  color: white;
-  padding: 32px 0 24px 0;
-  text-align: center;
+  width: 100;                /* Stretch header across the page */
+  box-sizing: border-box;
+  margin: 0;                  /* Remove default margin */
+  padding: 32px 0 24px 0;     /* Top/bottom padding, no left/right */
+  background-color: #e9ebed;  /* Intel blue background */
+  color: #581d1d;             /* Light text color */
+  text-align: center;         /* Center the content */
+  border-radius: 0 0 10px 10px; /* Rounded bottom corners */
+  /* إضافة صورة خلفية للعنوان */
+  background-image: url('https://reinforz.co.jp/bizmedia/wp-content/uploads/2024/01/26630462_s-600x338.jpg.webp');
+  background-size: cover;      /* تجعل الصورة تغطي كل الخلفية */
+  background-position: center; /* تجعل الصورة في وسط الخلفية */
+  background-repeat: no-repeat;/* تمنع تكرار الصورة */
 }
 
 /* شعار إنتل */
 header img {
   height: 60px;
-  width: auto;
+  width: 100%;
   margin-bottom: 16px;
 }
 
@@ -29,11 +42,16 @@ header h1 {
 }
 
 /* الوصف */
-header p {
-  margin: 0 auto;
-  max-width: 500px;
-  font-size: 1.1rem;
-}
+header {
+  background-color: #0068b5;
+  color: rgb(251, 249, 249);
+  padding: 0px 0 0px 0;
+  text-align: center;
+  /* إضافة صورة خلفية للعنوان */
+  
+  background-size: cover; /* تجعل الصورة تغطي كل الخلفية */
+  background-position: center; /* تجعل الصورة في وسط الخلفية */
+  background-repeat: repeat-y; /* تمنع تكرار الصورة */
 
 /* شريط التنقل */
 nav {
@@ -89,7 +107,8 @@ html[dir="ltr"] {
 
 /* Each timeline card will snap to the start of the container when scrolling */
 .timeline-card {
-  background: rgba(68, 82, 116, 0.952); /* Slightly transparent white */
+  /* لون رملي فاتح للبطاقة */
+  background-color: #9c9479; /* sandy beige color */
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   width: 45%;           /* Each card takes about half the container width */
@@ -146,7 +165,7 @@ html[dir="ltr"] {
 /* Hidden details section */
 .card-details {
   display: none; /* Hide by default */
-  background: #e6f0fa;
+  background: #5e5f60;
   color: #06325e;
   border-radius: 8px;
   padding: 8px;
@@ -183,7 +202,7 @@ html[dir="ltr"] {
 /* Add some spacing below the timeline */
 .timeline + p {
   text-align: center;
-  color: #fcfdff;
+  color: #eaebeb;
   margin-bottom: 32px;
   font-size: 1rem;
   text-shadow: #050505
