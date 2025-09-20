@@ -1,8 +1,8 @@
 /* استخدم خطوط بسيطة وخلفية واضحة */
 body {
   font-family: Arial, sans-serif;
-  background-color: #011a25;
-  color: #140d0d;
+  background-color: #f2f5f7;
+  color: #faf9f9;
   margin: 0;
   padding: 0;
   background-image: url('https://newsroom.intel.com/wp-content/uploads/2024/11/newsroom-Intel-ARL-Chip-4-scaled.jpg');
@@ -18,7 +18,7 @@ header {
   margin: 0;                  /* Remove default margin */
   padding: 32px 0 24px 0;     /* Top/bottom padding, no left/right */
   background-color: #e9ebed;  /* Intel blue background */
-  color: #f5f5f5;             /* Light text color */
+  color: #f5ecec;             /* Light text color */
   text-align: center;         /* Center the content */
   border-radius: 0 0 10px 10px; /* Rounded bottom corners */
   /* إضافة صورة خلفية للعنوان */
@@ -218,6 +218,34 @@ footer {
   letter-spacing: 0.5px;
   margin-top: 32px;
   border-radius: 10px 10px 0 0;
+}
+
+/* ====== Heading Styles ====== */
+/* h1: Main page title */
+h1 {
+  font-size: 2.2rem; /* Large font for main title */
+  font-weight: bold;
+  margin: 16px 0 12px 0;
+  color: #e1e5e9;
+  text-align: center;
+}
+
+/* h2: Section titles */
+h2 {
+  font-size: 1.5rem; /* Slightly smaller than h1 */
+  font-weight: bold;
+  margin: 14px 0 10px 0;
+  color: #06325e;
+  text-align: center;
+}
+
+/* h3: Subsection titles */
+h3 {
+  font-size: 1.2rem; /* Smaller than h2 */
+  font-weight: normal;
+  margin: 10px 0 8px 0;
+  color: #050505;
+  text-align: center;
 }
 
 /* End of CSS */
