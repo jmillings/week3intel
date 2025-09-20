@@ -76,8 +76,10 @@ nav {
 
 /* بطاقات الجدول الزمني */
 .card-title i {
-  color: #0068b5;
-  margin-left: 8px;
+  color: #00eaff;           /* لون أزرق عصري للأيقونة */
+  margin-left: 8px;         /* مسافة يسار الأيقونة */
+  font-size: 1.5em;         /* اجعل الأيقونة أكبر قليلاً */
+  vertical-align: middle;   /* وسط الأيقونة مع النص */
 }
 
 /* زر "تعرف أكثر" */
