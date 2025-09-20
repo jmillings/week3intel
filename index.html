@@ -15,8 +15,34 @@
       <a class="navbar-brand" href="#">
         <img src="img/intel-header-logo.svg" alt="شعار إنتل" style="height:40px;" />
       </a>
-      <div class="ms-auto">
-        <select id="lang-switch" class="form-select form-select-sm" aria-label="تغيير اللغة">
+      <!-- أزرار بسيطة في شريط التنقل، وسط الصفحة، مظهر عصري -->
+      <div class="w-100 d-flex justify-content-center align-items-center" style="gap: 12px;">
+        <!-- زر للانتقال إلى الجدول الزمني -->
+        <button 
+          class="btn btn-outline-light btn-sm"
+          style="border-radius: 20px; box-shadow: 0 0 8px #00bfff; background: rgba(1,26,37,0.7); color: #00eaff; border: 1.5px solid #00eaff;"
+          onclick="document.getElementById('timeline').scrollIntoView({behavior:'smooth'})"
+        >
+          الجدول الزمني
+        </button>
+        <!-- زر للانتقال إلى نموذج الاشتراك -->
+        <button 
+          class="btn btn-outline-light btn-sm"
+          style="border-radius: 20px; box-shadow: 0 0 8px #00bfff; background: rgba(1,26,37,0.7); color: #00eaff; border: 1.5px solid #00eaff;"
+          onclick="document.getElementById('subscribe').scrollIntoView({behavior:'smooth'})"
+        >
+          الاشتراك
+        </button>
+        <!-- زر للانتقال إلى التذييل (التواصل) -->
+        <button 
+          class="btn btn-outline-light btn-sm"
+          style="border-radius: 20px; box-shadow: 0 0 8px #00bfff; background: rgba(1,26,37,0.7); color: #00eaff; border: 1.5px solid #00eaff;"
+          onclick="document.querySelector('footer').scrollIntoView({behavior:'smooth'})"
+        >
+          تواصل معنا
+        </button>
+        <!-- محول اللغة -->
+        <select id="lang-switch" class="form-select form-select-sm ms-2" style="width: 110px;">
           <option value="ar" selected>العربية</option>
           <option value="en">English</option>
         </select>
@@ -44,9 +70,10 @@
         <div class="card h-100 text-center">
           <img src="https://pbs.twimg.com/media/CKKrYtvUYAAxQU8.png" class="card-img-top" alt="تأسيس إنتل" />
           <div class="card-body">
-            <h5 class="card-title">
+            <!-- استخدم h2 للعنوان الرئيسي للبطاقة -->
+            <h2 class="card-title">
               <i class="bi bi-building"></i> 1968 - تأسيس إنتل
-            </h5>
+            </h2>
             <p class="card-text">
               تأسست شركة إنتل، بداية عصر جديد في الابتكار التقني.
             </p>
@@ -66,9 +93,10 @@
         <div class="card h-100 text-center">
           <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Intel_C4004.jpg" class="card-img-top" alt="أول معالج دقيق" />
           <div class="card-body">
-            <h5 class="card-title">
+            <!-- استخدم h2 للعنوان الرئيسي للبطاقة -->
+            <h2 class="card-title">
               <i class="bi bi-cpu"></i> 1971 - أول معالج دقيق
-            </h5>
+            </h2>
             <p class="card-text">
               إطلاق معالج 4004، أول معالج دقيق تجاري في العالم.
             </p>
@@ -88,9 +116,10 @@
         <div class="card h-100 text-center">
           <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Intel_C8086.jpg" class="card-img-top" alt="معالج 8086" />
           <div class="card-body">
-            <h5 class="card-title">
+            <!-- استخدم h2 للعنوان الرئيسي للبطاقة -->
+            <h2 class="card-title">
               <i class="bi bi-chip"></i> 1978 - معالج 8086
-            </h5>
+            </h2>
             <p class="card-text">
               إطلاق معالج 8086، بداية معمارية x86 التي غيرت عالم الحواسيب.
             </p>
@@ -111,9 +140,10 @@
         <div class="card h-100 text-center">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/KL_Intel_i386DX.jpg/1200px-KL_Intel_i386DX.jpg"data:image/ alt="معالج 386" />
           <div class="card-body">
-            <h5 class="card-title">
+            <!-- استخدم h2 للعنوان الرئيسي للبطاقة -->
+            <h2 class="card-title">
               <i class="bi bi-gear"></i> 1985 - معالج 386
-            </h5>
+            </h2>
             <p class="card-text">
               قدمت إنتل معالج 386 بمعمارية 32 بت، مما غير قواعد اللعبة في أداء الحواسيب.
             </p>
@@ -134,9 +164,10 @@
         <div class="card h-100 text-center">
           <img src="https://www.brookings.edu/wp-content/uploads/2023/11/Screen-Shot-2023-11-30-at-3.10.00-PM.png?w=1500" alt="ذروة انبعاثات غازات الدفيئة" class="card-img-top" />
           <div class="card-body">
-            <h5 class="card-title">
+            <!-- استخدم h2 للعنوان الرئيسي للبطاقة -->
+            <h2 class="card-title">
               <i class="bi bi-graph-up"></i> 2006 - ذروة انبعاثات غازات الدفيئة
-            </h5>
+            </h2>
             <p class="card-text">
               سجلت إنتل أعلى مستوى سنوي لانبعاثات غازات الدفيئة، مما دفعها للاستثمار في الطاقة المتجددة وكفاءة الطاقة.
             </p>
@@ -157,9 +188,10 @@
         <div class="card h-100 text-center">
           <img src="https://media.licdn.com/dms/image/v2/D4E22AQEIOudyc3iCMQ/feedshare-shrink_800/feedshare-shrink_800/0/1683831861650?e=2147483647&v=beta&t=nA32mDRdjBHBmtGvRJ0tHHCjlOal6LDxB4u5vrhurQ4" alt="استراتيجية RISE" class="card-img-top" />
           <div class="card-body">
-            <h5 class="card-title">
+            <!-- استخدم h2 للعنوان الرئيسي للبطاقة -->
+            <h2 class="card-title">
               <i class="bi bi-arrow-up-right-circle"></i> 2020 - استراتيجية RISE
-            </h5>
+            </h2>
             <p class="card-text">
               أطلقت إنتل استراتيجيتها RISE وأهدافها لعام 2030، لتعزيز العمل المناخي وإدارة المياه وتقليل النفايات.
             </p>
@@ -180,9 +212,10 @@
         <div class="card h-100 text-center">
           <img src="https://edienetlive.s3.eu-west-2.amazonaws.com/wp-content/uploads/sites/2/full_43259.jpg" alt="الحياد الكربوني بحلول 2040" class="card-img-top" />
           <div class="card-body">
-            <h5 class="card-title">
+            <!-- استخدم h2 للعنوان الرئيسي للبطاقة -->
+            <h2 class="card-title">
               <i class="bi bi-leaf"></i> 2022 - الحياد الكربوني بحلول 2040
-            </h5>
+            </h2>
             <p class="card-text">
               أعلنت إنتل التزامها بتحقيق حياد انبعاثات غازات الدفيئة بحلول عام 2040، استنادًا إلى سنوات من المبادرات البيئية.
             </p>
@@ -203,9 +236,10 @@
         <div class="card h-100 text-center">
           <img src="https://www.nationalgrid.com/sites/default/files/styles/content_embedded_image/public/images/EnergyExplained_DifferentTypesRenewableEnergy_640x360.jpg?itok=CbYblcpT" alt="الكهرباء المتجددة" class="card-img-top" />
           <div class="card-body">
-            <h5 class="card-title">
+            <!-- استخدم h2 للعنوان الرئيسي للبطاقة -->
+            <h2 class="card-title">
               <i class="bi bi-bolt"></i> 2023 - الكهرباء المتجددة
-            </h5>
+            </h2>
             <p class="card-text">
               حققت الشركة استخدام 99% من الكهرباء المتجددة على مستوى العالم، مما ساعد في خفض انبعاثات الكربون.
             </p>
@@ -226,9 +260,10 @@
         <div class="card h-100 text-center">
           <img src="https://regmedia.co.uk/2021/03/17/shutterstock_green_computing.jpg" alt="قمة الاستدامة" class="card-img-top" />
           <div class="card-body">
-            <h5 class="card-title">
+            <!-- استخدم h2 للعنوان الرئيسي للبطاقة -->
+            <h2 class="card-title">
               <i class="bi bi-people"></i> 2024 - قمة الاستدامة
-            </h5>
+            </h2>
             <p class="card-text">
               استضافت إنتل أول قمة للاستدامة، موحدة الموردين والمسؤولين الحكوميين وقادة الصناعة للتعاون في تصنيع أشباه الموصلات المستدامة.
             </p>

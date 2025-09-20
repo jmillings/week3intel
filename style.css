@@ -28,30 +28,46 @@ header {
   background-repeat: no-repeat;/* تمنع تكرار الصورة */
 }
 
-/* شعار إنتل */
+/* ====== Futuristic Header Styles ====== */
+
+/* شعار إنتل في الأعلى */
 header img {
+  /* اجعل الشعار أصغر قليلاً وأضف ظل أزرق */
   height: 60px;
-  width: 100%;
+  width: auto;
   margin-bottom: 16px;
+  border-radius: 12px;
+  box-shadow: 0 0 18px #00eaff, 0 0 4px #0068b5;
+  background: rgba(1,26,37,0.15);
 }
 
-/* العنوان الرئيسي */
+/* العنوان الرئيسي بشكل عصري */
 header h1 {
   margin: 0 0 12px 0;
-  font-size: 2.2rem;
+  font-size: 2.4rem;
+  font-family: 'Arial Black', Arial, sans-serif;
+  color: #00eaff;
+  letter-spacing: 2px;
+  text-shadow: 0 0 12px #00eaff, 0 0 2px #0068b5;
+  border-bottom: 2px solid #00eaff;
+  display: inline-block;
+  padding: 8px 24px 4px 24px;
+  background: rgba(1,26,37,0.12);
+  border-radius: 18px;
 }
 
-/* الوصف */
-header {
-  background-color: #0068b5;
-  color: rgb(251, 249, 249);
-  padding: 0px 0 0px 0;
-  text-align: center;
-  /* إضافة صورة خلفية للعنوان */
-  
-  background-size: cover; /* تجعل الصورة تغطي كل الخلفية */
-  background-position: center; /* تجعل الصورة في وسط الخلفية */
-  background-repeat: repeat-y; /* تمنع تكرار الصورة */
+/* وصف العنوان بشكل عصري */
+header p {
+  font-size: 1.15rem;
+  color: #e1e5e9;
+  background: rgba(0, 234, 255, 0.08);
+  border-radius: 12px;
+  padding: 10px 18px;
+  margin: 12px auto 0 auto;
+  box-shadow: 0 0 8px #00eaff;
+  text-shadow: 0 0 6px #00eaff;
+  max-width: 500px;
+}
 
 /* شريط التنقل */
 nav {
@@ -105,72 +121,84 @@ html[dir="ltr"] {
   margin-right: 30px; /* Add space to the right of the timeline */
 }
 
-/* Each timeline card will snap to the start of the container when scrolling */
+/* ====== Futuristic Timeline Card Styles ====== */
 .timeline-card {
-  /* لون رملي فاتح للبطاقة */
-  background-color: #9c9479; /* sandy beige color */
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  width: 45%;           /* Each card takes about half the container width */
+  /* لون خلفية داكن عصري مع تدرج أزرق */
+  background: linear-gradient(135deg, #011a25 60%, #00eaff 100%);
+  border-radius: 18px;
+  box-shadow: 0 0 18px #00eaff, 0 0 4px #0068b5;
+  width: 45%;
   min-width: 260px;
   max-width: 320px;
-  flex: 0 0 260px; /* Prevent shrinking, fixed width */
+  flex: 0 0 260px;
   padding: 20px 16px 16px 16px;
   position: relative;
-  transition: box-shadow 0.2s, transform 0.2s; /* Add transform to transition */
+  transition: box-shadow 0.2s, transform 0.2s, background 0.3s;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
-  scroll-snap-align: start; /* Snap each card to the start of the timeline */
+  scroll-snap-align: start;
+  border: 2px solid #00eaff;
 }
 
+/* عند تمرير الماوس، تزداد الإضاءة */
 .timeline-card:hover {
-  box-shadow: 0 4px 16px rgba(0,104,181,0.18);
-  transform: scale(1.04); /* Slightly enlarge card on hover */
+  box-shadow: 0 0 32px #00eaff, 0 0 8px #0068b5;
+  transform: scale(1.06);
+  background: linear-gradient(135deg, #011a25 40%, #00eaff 100%);
 }
 
-/* Card image styles */
+/* صورة البطاقة بشكل عصري */
 .card-img {
   width: 80%;
-  height: 130px; /* Contain the image within the box */
-  border-radius: 8px;
+  height: 130px;
+  border-radius: 12px;
   margin-bottom: 12px;
-  background: #e0e7ef; /* Placeholder bg if image missing */
+  background: #e0e7ef;
+  box-shadow: 0 0 8px #00eaff;
+  border: 1.5px solid #00eaff;
 }
 
-/* Card headings */
-.timeline-card h2 {
+/* عنوان البطاقة بشكل عصري */
+.timeline-card h2, .timeline-card h5 {
   margin: 0;
-  color: #01080f;
+  color: #00eaff;
   font-size: 1.3rem;
-  text-shadow: 1px 1px 4px rgba(247, 243, 243, 0.18); /* Add subtle shadow for readability */
+  text-shadow: 0 0 8px #00eaff, 0 0 2px #0068b5;
+  letter-spacing: 1px;
 }
 
+/* عنوان فرعي للبطاقة */
 .timeline-card h3 {
   margin: 4px 0 8px 0;
   font-size: 1.1rem;
-  color: #050505;
+  color: #e1e5e9;
+  text-shadow: 0 0 4px #00eaff;
 }
 
-/* Card paragraph */
+/* نص البطاقة بشكل عصري */
 .timeline-card p {
-  font-size: 0.98rem;
+  font-size: 1rem;
   margin: 0 0 8px 0;
   text-align: center;
-  color: #000000;
-  text-shadow: #d5d9db;
+  color: #e1e5e9;
+  text-shadow: 0 0 4px #00eaff;
+  background: rgba(1,26,37,0.18);
+  border-radius: 8px;
+  padding: 6px 10px;
 }
 
-/* Hidden details section */
+/* تفاصيل البطاقة عند تمرير الماوس */
 .card-details {
-  display: none; /* Hide by default */
-  background: #5e5f60;
-  color: #06325e;
-  border-radius: 8px;
+  display: none;
+  background: #011a25;
+  color: #00eaff;
+  border-radius: 10px;
   padding: 8px;
   margin-top: 8px;
   font-size: 0.95rem;
+  box-shadow: 0 0 8px #00eaff;
   transition: opacity 0.3s;
 }
 
